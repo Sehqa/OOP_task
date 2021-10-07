@@ -1,9 +1,8 @@
 from abc import ABC, abstractmethod
-from fast_cat import FastCat
-from slow_cat import SlowCat
+from threading import Thread
 
 
-class Runnable(metaclass=ABC):
+class Runnable():
 
     @abstractmethod
     def run(self):
@@ -23,12 +22,12 @@ class Cat(ABC, Runnable):
         print('Cat run')
 
     def hearVacuumCleaner(self):
+        meow_thread=Thread(target=self.meow())
+        run_thread=Thread(target=self.run())
+        messages_thread=Thread(target=print('Furious cat'))
+        meow_thread.start()
+        run_thread.start()
+        messages_thread.start()
         pass
 
 
-fast_cats = FastCat('black')
-fast_cats.meow()
-fast_cats.jump()
-slow_cats = SlowCat('white')
-slow_cats.meow()
-slow_cats.jump()
