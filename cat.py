@@ -2,14 +2,14 @@ from abc import ABC, abstractmethod
 from threading import Thread
 
 
-class Runnable():
+class Runnable(ABC):
 
     @abstractmethod
     def run(self):
         pass
 
 
-class Cat(ABC, Runnable):
+class Cat(Runnable):
 
     def jump(self):
         print('jumped at ' + str(self.speed) + ' centimeters')
@@ -22,12 +22,9 @@ class Cat(ABC, Runnable):
         print('Cat run')
 
     def hearVacuumCleaner(self):
-        meow_thread=Thread(target=self.meow())
-        run_thread=Thread(target=self.run())
-        messages_thread=Thread(target=print('Furious cat'))
+        meow_thread = Thread(target=self.meow())
+        run_thread = Thread(target=self.run())
+        messages_thread = Thread(target=print('Furious cat'))
         meow_thread.start()
         run_thread.start()
         messages_thread.start()
-        pass
-
-
