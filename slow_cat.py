@@ -1,4 +1,5 @@
 from cat import Cat
+from time import sleep
 
 
 class SlowCat(Cat):

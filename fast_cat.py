@@ -1,4 +1,5 @@
 from cat import Cat
+from time import sleep
 
 
 class FastCat(Cat):
@@ -9,6 +10,9 @@ class FastCat(Cat):
         self.color = color
 
     def meow(self):
+        for i in range(5):
+            print(f"from child thread: {i}")
+            sleep(0.5)
         print('meow')
 
     def jump(self):
