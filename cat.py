@@ -17,6 +17,12 @@ class Cat(Runnable, ABC):
     def set_speed(self, speed):
         self._speed = speed
 
+    def get_color(self):
+        return self._color
+
+    def get_speed(self):
+        return self._speed
+
     def jump(self):
         print('jumped at ' + str(self._speed) + ' centimeters')
 
