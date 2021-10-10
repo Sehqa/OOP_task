@@ -9,13 +9,19 @@ class Runnable(ABC):
         pass
 
 
-class Cat(Runnable):
+class Cat(Runnable, ABC):
+
+    def set_color(self, color):
+        self._color = color
+
+    def set_speed(self, speed):
+        self._speed = speed
 
     def jump(self):
-        print('jumped at ' + str(self.speed) + ' centimeters')
+        print('jumped at ' + str(self._speed) + ' centimeters')
 
     @abstractmethod
-    def meow(self):
+    def _meow(self):
         pass
 
     def run(self):

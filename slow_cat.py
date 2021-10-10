@@ -1,15 +1,16 @@
 from cat import Cat
-from time import sleep
 
 
 class SlowCat(Cat):
     meow_message = 'meeoow'
+    _speed = 100
+    _color = ''
 
     def __init__(self, color):
-        self.speed = 100
-        self.color = color
+        self._speed = SlowCat._speed
+        self._color = color
 
-    def meow(self):
+    def _meow(self):
         print('meeoow')
 
     def run(self):
