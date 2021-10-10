@@ -19,6 +19,7 @@ class Cat(Runnable, ABC):
         
 Класс FastCat наследует все методы и свойства класса Cat (Например метод
 run): 
+
     fast_cats = FastCat('black')
     fast_cats.run()
 
