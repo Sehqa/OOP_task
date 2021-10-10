@@ -25,10 +25,10 @@ fast_cats.run()
 
 Например в поле _speed, через метод set_speed можно передать цифру, текст, список и т.д
 
-fast_cats = FastCat('black')
-fast_cats.set_speed(1)
-fast_cats.set_speed('text')
-fast_cats.set_speed([1,2,3,4,56])
+    fast_cats = FastCat('black')
+    fast_cats.set_speed(1)
+    fast_cats.set_speed('text')
+    fast_cats.set_speed([1,2,3,4,56])
 
 Инкапсуляция : 
 
