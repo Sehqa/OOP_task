@@ -11,13 +11,16 @@ class Cat(Runnable, ABC):
 быть переопределен в дочернем классе.
 
 Наследование: 
-
-class FastCat(Cat):
- 
+    class Cat(Runnable, ABC):
+         def run(self):
+            print('Cat run')
+        
+    class FastCat(Cat):
+        
 Класс FastCat наследует все методы и свойства класса Cat (Например метод
 run): 
-fast_cats = FastCat('black')
-fast_cats.run()
+    fast_cats = FastCat('black')
+    fast_cats.run()
 
 Полиморфизм:
 
