@@ -31,3 +31,13 @@ fast_cats.run()
 
 В коде принцип инкапсуляции реализован при помощи get/set 
 а так же при помощи подчеркивания перед полями или методами
+
+    def set_speed(self, speed):
+        self._speed = speed
+
+    def get_speed(self):
+        return self._speed
+
+    @abstractmethod
+    def _meow(self):
+        pass
